@@ -1,4 +1,4 @@
-a="Alfeen"
+a="Alfin Bachtiar"
 b= 20
 c="Teknik Informatika"
 d=12345678
