@@ -1,35 +1,29 @@
-print('='*10,'DATA MATA PELAJARAN','='*10)
-panjangdata= int(input('Masukkan banyak mapel :'))
+print('='*10,'ADMIN','='*10)
+panjangdata= int(input('Masukkan banyak buku yang ingin di input :\n'))
 datas=[]
-i=1
-while i <=panjangdata:
-    matapelajaran=input(f'Masukkan Mata Pelajaran Ke-{i}:')
+
+n=1
+while n <=panjangdata:
+    matapelajaran=input(f'Masukkan buku Ke-{n}:\n')
     datas.append(matapelajaran)
-    i+=1
+    n+=1
+
 print('='*37)
-print('berikut adalah mapel yang berhasil dimasukkan','\n',datas)
+print('berikut adalah daftar buku yang berhasil dimasukkan','\n',datas)
+datas_lower=[data.lower() for data in datas]
 print('='*37)
 
-lanjut=input('Apakah anda ingin lanjut mencari mapel? (y/n)')
+lanjut=input('Apakah anda ingin lanjut mencari buku? (y/n)\n')
 if lanjut != "y":
     exit()
 
 print("\n","="*10,'PENCARIAN MAPEL',"="*10)
-cari=input('Masukkan kata kunci mapel yang ingin dicari :')
+cari=input('Masukkan buku yang ingin dicari :')
 print("="*37)
-hasil=[]
 
-for data in datas:
-    if cari in data:
-        hasil.append(data)
-if datas:
-    print(f'Data yang mengandung kata "{cari}" ada pada mapel :')
-    print('No | Mapel \t\t| index')
-    for index,i in enumerate(hasil):
-        print(f' {index + 1} | {i} \t| {index}')
-else:
-    print(f'Tidak ada data')
-
+for index,i in enumerate(datas):
+    if cari.lower() in i.lower() in datas_lower:
+        print(f'Hasil yang relevan dengan kata {cari} adalah : {i} ,ada pada rak {index}')
 
 
 
