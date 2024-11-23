@@ -19,3 +19,6 @@ else:
     terbesar = z
 
 print("bilangan terbesar saat ini =", terbesar)
+
+a="konti"
+print("ini adalah string", a)
